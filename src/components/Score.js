@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "./Header";
 
 function Score({ setQuesNo, score, setScore, fetchApi }) {
@@ -24,11 +23,11 @@ function Score({ setQuesNo, score, setScore, fetchApi }) {
 					className='bg-black text-white p-3 rounded shadow-md hover:shadow-lg hover:bg-gray-900 transition transform hover:scale-105'>
 					Retry Quiz
 				</button>
-				<Link
-					to='/'
+				<a
+					href='/'
 					className='bg-black text-white p-3 rounded shadow-md hover:shadow-lg hover:bg-gray-900 transition transform hover:scale-105'>
 					Home Page
-				</Link>
+				</a>
 			</div>
 		</main>
 	);
