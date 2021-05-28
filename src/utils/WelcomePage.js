@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Instruction from "../components/Instruction";
 
 function WelcomePage({fetchApi}) {
 	return (
@@ -6,10 +7,11 @@ function WelcomePage({fetchApi}) {
 			<h1 className='text-5xl underline font-bold text-purple-900'>
 				QUIZ ZILLA
 			</h1>
+			<Instruction />
             <Link
-                onClick={fetchApi}
+                // onClick={fetchApi}
 				to='/start-quiz'
-				className='text-white bg-black px-2 py-3 rounded font-semibold shadow-md hover:scale-105 transition transform duration-100 -mt-40 hover:bg-gray-900'>
+				className='text-white bg-black px-2 py-3 rounded font-semibold shadow-md hover:scale-105 transition transform duration-100 hover:bg-gray-900'>
 				Start Quiz
 			</Link>
 		</main>

@@ -1,7 +1,8 @@
 import { useState, Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Main from "./components/Main";
-import WelcomePage from "./components/WelcomePage";
+import Header from "./components/Header";
+import Main from "./utils/Main";
+import WelcomePage from "./utils/WelcomePage";
 
 function App() {
 	const _API = "https://opentdb.com/api.php?amount=1";
@@ -17,7 +18,9 @@ function App() {
 			.then((data) => setQuestions(data.results));
 	};
 
-	// useEffect(() => fetchApi(), []);
+	useEffect(() => {
+		fetchApi();
+	}, []);
 
 	return (
 		<Router>
@@ -36,6 +39,7 @@ function App() {
 						</Fragment>
 					) : (
 						<main className='flex items-center justify-center h-screen w-full bg-pink-100'>
+							<Header quesNo={quesNo} />
 							<div
 								className='h-8 w-8 border border-gray-100 animate-spin rounded-full mr-4'
 								style={{
