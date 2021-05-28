@@ -34,7 +34,7 @@ function Question({
 							<Button
 								key={i}
 								updateScore={updateScore}
-								isAnswered={setIsAnswered}
+								setIsAnswered={setIsAnswered}
 								option={e}
 								isAnswer={answer === e ? true : false}
 							/>

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-function Button({ option, isAnswer, isAnswered, disable, updateScore }) {
+function Button({ option, isAnswer, setIsAnswered, disable, updateScore }) {
 	const [class1, setClass1] = useState("");
 
 	const checkAns = () => {
 		isAnswer
 			? setClass1("bg-green-500 hover:bg-green-600")
 			: setClass1("bg-red-500 hover:bg-red-600");
-		isAnswered(true);
+		setIsAnswered(true);
 		updateScore(isAnswer);
 	};
 
